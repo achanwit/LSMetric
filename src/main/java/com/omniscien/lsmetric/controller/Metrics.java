@@ -52,6 +52,11 @@ public class Metrics {
 		
 	}
 	
+	public void propertiesSetting(String filePath) {
+		rp = new ReadProp(filePath);
+		
+	}
+	
 	public String Metric(String MetricType, int InputType, String InputReference, String InputCandidate, int CaseSensitive, String MetricOptions,int JSONOutputFormat,
 			int FileOutputFormat, String FileOutputPath) throws Exception {
 		
