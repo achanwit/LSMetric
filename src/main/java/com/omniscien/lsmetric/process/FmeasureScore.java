@@ -655,8 +655,8 @@ public class FmeasureScore {
 			cand = cand.toLowerCase();
 		}
 		double cumulativeF1 = 0;
-		Set<String> refSet = new HashSet<>();
-		Set<String> candSet = new HashSet<>();
+		Set<String> refSet = new HashSet<String>();
+		Set<String> candSet = new HashSet<String>();
 		String[] splitRefArray,splitCandArray ;
 
 		splitRefArray = ref.split("\\s+");

@@ -207,7 +207,7 @@ public class LevenshteinDistance {
 	}
 
 	public String getScoreFromTextFile(int CaseSensitive, String InputReference, String InputCandidate,
-			int OutputFormat, long begintime, String startTimeStr) throws IOException {
+			int OutputFormat, long begintime, String startTimeStr) throws Exception {
 		String jsonResult = null;
 		
 		if (OutputFormat == 2 || OutputFormat == 3 || OutputFormat == 4) {
