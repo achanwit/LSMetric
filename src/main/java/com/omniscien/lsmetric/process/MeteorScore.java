@@ -102,7 +102,7 @@ public class MeteorScore {
 	public MeteorScore() {
 		// Properties
 		if (rp == null) {
-			rp = new ReadProp("/omniscien/tools/wfs/metrics/bleu/metricConfig.properties");
+			rp = new ReadProp("/omniscien/tools/wfs/metrics/metricConfig.properties");
 		}
 	}
 	

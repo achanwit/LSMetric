@@ -96,7 +96,7 @@ public class RougeScore {
 	public RougeScore() {
 		// Properties
 		if (rp == null) {
-			rp = new ReadProp("/omniscien/tools/wfs/metrics/bleu/metricConfig.properties");
+			rp = new ReadProp("/omniscien/tools/wfs/metrics/metricConfig.properties");
 		}
 	}
 
