@@ -8,8 +8,8 @@ public class TestcalculateLevenString {
 
 	public static void main(String[] args) {
 		com.omniscien.lsmetric.controller.Metrics mt = new com.omniscien.lsmetric.controller.Metrics();
-		int result = mt.calculateLevenString("Los Times estaban cambiando .", "Los tiempos estaban cambiando .", true);
-		System.out.println("result: "+result);
+//		int result = mt.calculateLevenString("Los Times estaban cambiando .", "Los tiempos estaban cambiando .", true);
+//		System.out.println("result: "+result);
 
 	}
 

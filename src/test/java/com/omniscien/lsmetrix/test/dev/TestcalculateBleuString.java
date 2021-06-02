@@ -9,9 +9,9 @@ public class TestcalculateBleuString {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		com.omniscien.lsmetric.controller.Metrics mt = new com.omniscien.lsmetric.controller.Metrics();
-		double result = mt.calculateBleuString("Los Times estaban cambiando .", "Los tiempos estaban cambiando .", true);
+//		double result = mt.calculateBleuString("Los Times estaban cambiando .", "Los tiempos estaban cambiando .", true);
 		
-		System.out.println("result: "+result);
+//		System.out.println("result: "+result);
 	}
 
 }
