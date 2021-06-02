@@ -655,7 +655,7 @@ public class BeerScore {
 	}
 
 	private String getRawScore(String inputReference, String inputCandidate, boolean b) throws IOException, InterruptedException {
-		String shellName ="/omniscien/tools/wfs/metrics/beer/beer";
+		String shellName =rp.getProp(Constant.beer_Shell);
 		String Soption = "-s";
 		String Roption = "-r";
 		String printOption = "--printSentScores";
