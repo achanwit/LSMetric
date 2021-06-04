@@ -96,13 +96,13 @@ public class RougeScore {
 	public RougeScore() {
 		// Properties
 		if (rp == null) {
-			rp = new ReadProp("/omniscien/tools/wfs/metrics/metricConfig.properties");
+			rp = new ReadProp("/omniscien/tools/wfs/metrics/metricConfig.json");
 		}
 	}
 
 	public String getScoreFromTextFile(int CaseSensitive, String InputReference, String InputCandidate,
-			int OutputFormat, long begintime, String startTimeStr) throws Exception {
-		// TODO Auto-generated method stub
+			int OutputFormat, long begintime, String startTimeStr, ReadProp rp2) throws Exception {
+		this.rp = rp2;
 		String jsonResult = null;
 		
 		if (OutputFormat == 2 || OutputFormat == 3 || OutputFormat == 4) {

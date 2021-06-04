@@ -109,7 +109,7 @@ public class LevenshteinDistance {
 	public LevenshteinDistance() {
 		// Properties
 		if (rp == null) {
-			rp = new ReadProp("/omniscien/tools/wfs/metrics/metricConfig.properties");
+			rp = new ReadProp("/omniscien/tools/wfs/metrics/metricConfig.json");
 		}
 	}
 	
@@ -207,9 +207,9 @@ public class LevenshteinDistance {
 	}
 
 	public String getScoreFromTextFile(int CaseSensitive, String InputReference, String InputCandidate,
-			int OutputFormat, long begintime, String startTimeStr) throws Exception {
+			int OutputFormat, long begintime, String startTimeStr, ReadProp rp2) throws Exception {
 		String jsonResult = null;
-		
+		this.rp = rp2;
 		if (OutputFormat == 2 || OutputFormat == 3 || OutputFormat == 4) {
 			if (OutputFormat == 2) {
 				if (CaseSensitive == 1) {
