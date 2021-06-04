@@ -139,7 +139,7 @@ public class Metrics {
 				// Input as Single line
 				else if (InputType == 2) {
 					if(rp == null) {
-						rp = new ReadProp("/omniscien/tools/wfs/metrics/metricConfig.properties");
+						rp = new ReadProp("/omniscien/tools/wfs/metrics/metricConfig.json");
 					}
 					//CheckDirectory
 					String tempDirectory = rp.getProp(Constant.temp_Foleder);
@@ -198,7 +198,7 @@ public class Metrics {
 				// Input as Single line
 				else if (InputType == 2) {
 					if(rp == null) {
-						rp = new ReadProp("/omniscien/tools/wfs/metrics/metricConfig.properties");
+						rp = new ReadProp("/omniscien/tools/wfs/metrics/metricConfig.json");
 					}
 					//CheckDirectory
 					String tempDirectory = rp.getProp(Constant.temp_Foleder);
@@ -251,7 +251,7 @@ public class Metrics {
 				else if (InputType == 2) {
 					//CheckDirectory
 					if(rp == null) {
-						rp = new ReadProp("/omniscien/tools/wfs/metrics/metricConfig.properties");
+						rp = new ReadProp("/omniscien/tools/wfs/metrics/metricConfig.json");
 					}
 					String tempDirectory = rp.getProp(Constant.temp_Foleder);
 					File directory = new File(tempDirectory);
@@ -304,7 +304,7 @@ public class Metrics {
 				else if (InputType == 2) {
 					//CheckDirectory
 					if(rp == null) {
-						rp = new ReadProp("/omniscien/tools/wfs/metrics/metricConfig.properties");
+						rp = new ReadProp("/omniscien/tools/wfs/metrics/metricConfig.json");
 					}
 					String tempDirectory = rp.getProp(Constant.temp_Foleder);
 					File directory = new File(tempDirectory);
@@ -358,7 +358,7 @@ public class Metrics {
 				else if (InputType == 2) {
 					//CheckDirectory
 					if(rp == null) {
-						rp = new ReadProp("/omniscien/tools/wfs/metrics/metricConfig.properties");
+						rp = new ReadProp("/omniscien/tools/wfs/metrics/metricConfig.json");
 					}
 					String tempDirectory = rp.getProp(Constant.temp_Foleder);
 					File directory = new File(tempDirectory);
@@ -408,7 +408,7 @@ public class Metrics {
 				}else if (InputType == 2) {
 					//CheckDirectory
 					if(rp == null) {
-						rp = new ReadProp("/omniscien/tools/wfs/metrics/metricConfig.properties");
+						rp = new ReadProp("/omniscien/tools/wfs/metrics/metricConfig.json");
 					}
 					String tempDirectory = rp.getProp(Constant.temp_Foleder);
 					File directory = new File(tempDirectory);
@@ -459,7 +459,7 @@ public class Metrics {
 				}else if (InputType == 2) {
 					//CheckDirectory
 					if(rp == null) {
-						rp = new ReadProp("/omniscien/tools/wfs/metrics/metricConfig.properties");
+						rp = new ReadProp("/omniscien/tools/wfs/metrics/metricConfig.json");
 					}
 					String tempDirectory = rp.getProp(Constant.temp_Foleder);
 					File directory = new File(tempDirectory);
@@ -509,7 +509,7 @@ public class Metrics {
 				}else if (InputType == 2) {
 					//CheckDirectory
 					if(rp == null) {
-						rp = new ReadProp("/omniscien/tools/wfs/metrics/metricConfig.properties");
+						rp = new ReadProp("/omniscien/tools/wfs/metrics/metricConfig.json");
 					}
 					String tempDirectory = rp.getProp(Constant.temp_Foleder);
 					File directory = new File(tempDirectory);
@@ -558,7 +558,7 @@ public class Metrics {
 				}else if (InputType == 2) {
 					//CheckDirectory
 					if(rp == null) {
-						rp = new ReadProp("/omniscien/tools/wfs/metrics/metricConfig.properties");
+						rp = new ReadProp("/omniscien/tools/wfs/metrics/metricConfig.json");
 					}
 					String tempDirectory = rp.getProp(Constant.temp_Foleder);
 					File directory = new File(tempDirectory);
@@ -611,7 +611,7 @@ public class Metrics {
 				}else if (InputType == 2) {
 					//CheckDirectory
 					if(rp == null) {
-						rp = new ReadProp("/omniscien/tools/wfs/metrics/metricConfig.properties");
+						rp = new ReadProp("/omniscien/tools/wfs/metrics/metricConfig.json");
 					}
 					String tempDirectory = rp.getProp(Constant.temp_Foleder);
 					File directory = new File(tempDirectory);
@@ -652,7 +652,7 @@ public class Metrics {
 			}else if (MetricType.equals(METRIC_TERP)) {
 				//CheckDirectory
 				if(rp == null) {
-					rp = new ReadProp("/omniscien/tools/wfs/metrics/metricConfig.properties");
+					rp = new ReadProp("/omniscien/tools/wfs/metrics/metricConfig.json");
 				}
 				String tempDirectory = rp.getProp(Constant.temp_Foleder);
 				File directory = new File(tempDirectory);
