@@ -128,10 +128,10 @@ public class Metrics {
 				//Input as File
 				if(InputType == 1) {
 					
-					result = bleu.getScoreFromTextFile(CaseSensitive, InputReference, InputCandidate, JSONOutputFormat, begintime, startTimeStr);
+					result = bleu.getScoreFromTextFile(CaseSensitive, InputReference, InputCandidate, JSONOutputFormat, begintime, startTimeStr, rp);
 					
 					if(FileOutputFormat != 0) {
-						String resultForWrite = bleu.getScoreFromTextFile(CaseSensitive, InputReference, InputCandidate, FileOutputFormat, begintime, startTimeStr);
+						String resultForWrite = bleu.getScoreFromTextFile(CaseSensitive, InputReference, InputCandidate, FileOutputFormat, begintime, startTimeStr, rp);
 						writeFile(resultForWrite, FileOutputPath);
 						
 					}
@@ -161,10 +161,10 @@ public class Metrics {
 					for(int i = 0;i< refData.length; i++) {
 						writeFile(refData[i], RefFileName);
 					}
-					result = bleu.getScoreFromTextFile(CaseSensitive, RefFileName, CanFileName, JSONOutputFormat, begintime, startTimeStr);
+					result = bleu.getScoreFromTextFile(CaseSensitive, RefFileName, CanFileName, JSONOutputFormat, begintime, startTimeStr, rp);
 					
 					if(FileOutputFormat != 0) {
-						String resultForWrite = bleu.getScoreFromTextFile(CaseSensitive, RefFileName, CanFileName, FileOutputFormat, begintime, startTimeStr);
+						String resultForWrite = bleu.getScoreFromTextFile(CaseSensitive, RefFileName, CanFileName, FileOutputFormat, begintime, startTimeStr, rp);
 						writeFile(resultForWrite, FileOutputPath);
 						
 					}
@@ -186,11 +186,11 @@ public class Metrics {
 				com.omniscien.lsmetric.process.LevenshteinDistance leven = new com.omniscien.lsmetric.process.LevenshteinDistance();
 				//Input as File
 				if(InputType == 1) {
-					result = leven.getScoreFromTextFile(CaseSensitive, InputReference, InputCandidate, JSONOutputFormat, begintime, startTimeStr);
+					result = leven.getScoreFromTextFile(CaseSensitive, InputReference, InputCandidate, JSONOutputFormat, begintime, startTimeStr, rp);
 					
 
 					if(FileOutputFormat != 0) {
-						String resultForWrite = leven.getScoreFromTextFile(CaseSensitive, InputReference, InputCandidate, FileOutputFormat, begintime, startTimeStr);
+						String resultForWrite = leven.getScoreFromTextFile(CaseSensitive, InputReference, InputCandidate, FileOutputFormat, begintime, startTimeStr, rp);
 						writeFile(resultForWrite, FileOutputPath);
 						
 					}
@@ -220,10 +220,10 @@ public class Metrics {
 					for(int i = 0;i< refData.length; i++) {
 						writeFile(refData[i], RefFileName);
 					}
-					result = leven.getScoreFromTextFile(CaseSensitive, RefFileName, CanFileName, JSONOutputFormat, begintime, startTimeStr);
+					result = leven.getScoreFromTextFile(CaseSensitive, RefFileName, CanFileName, JSONOutputFormat, begintime, startTimeStr, rp);
 					
 					if(FileOutputFormat != 0) {
-						String resultForWrite = leven.getScoreFromTextFile(CaseSensitive, RefFileName, CanFileName, FileOutputFormat, begintime, startTimeStr);
+						String resultForWrite = leven.getScoreFromTextFile(CaseSensitive, RefFileName, CanFileName, FileOutputFormat, begintime, startTimeStr, rp);
 						writeFile(resultForWrite, FileOutputPath);
 						
 					}
@@ -239,9 +239,9 @@ public class Metrics {
 			}else if(MetricType.equals(METRIC_WER)) {
 				com.omniscien.lsmetric.process.WordErrorRate wer = new com.omniscien.lsmetric.process.WordErrorRate();
 				if(InputType == 1) {
-					result = wer.getScoreFromTextFile(CaseSensitive, InputReference, InputCandidate, JSONOutputFormat, begintime, startTimeStr);
+					result = wer.getScoreFromTextFile(CaseSensitive, InputReference, InputCandidate, JSONOutputFormat, begintime, startTimeStr, rp);
 					if(FileOutputFormat != 0) {
-						String resultForWrite = wer.getScoreFromTextFile(CaseSensitive, InputReference, InputCandidate, FileOutputFormat, begintime, startTimeStr);
+						String resultForWrite = wer.getScoreFromTextFile(CaseSensitive, InputReference, InputCandidate, FileOutputFormat, begintime, startTimeStr, rp);
 						writeFile(resultForWrite, FileOutputPath);
 						
 					}
@@ -273,10 +273,10 @@ public class Metrics {
 						writeFile(refData[i], RefFileName);
 					}
 					
-					result = wer.getScoreFromTextFile(CaseSensitive, RefFileName, CanFileName, JSONOutputFormat, begintime, startTimeStr);
+					result = wer.getScoreFromTextFile(CaseSensitive, RefFileName, CanFileName, JSONOutputFormat, begintime, startTimeStr, rp);
 					
 					if(FileOutputFormat != 0) {
-						String resultForWrite = wer.getScoreFromTextFile(CaseSensitive, RefFileName, CanFileName, FileOutputFormat, begintime, startTimeStr);
+						String resultForWrite = wer.getScoreFromTextFile(CaseSensitive, RefFileName, CanFileName, FileOutputFormat, begintime, startTimeStr, rp);
 						writeFile(resultForWrite, FileOutputPath);
 						
 					}
@@ -292,10 +292,10 @@ public class Metrics {
 			}else if(MetricType.equals(METRIC_TER)) {
 				com.omniscien.lsmetric.process.TranslationErrorScore ter = new com.omniscien.lsmetric.process.TranslationErrorScore();
 				if(InputType == 1) {
-					result = ter.getScoreFromTextFile(CaseSensitive, InputReference, InputCandidate, JSONOutputFormat, begintime, startTimeStr);
+					result = ter.getScoreFromTextFile(CaseSensitive, InputReference, InputCandidate, JSONOutputFormat, begintime, startTimeStr, rp);
 					
 					if(FileOutputFormat != 0) {
-						String resultForWrite = ter.getScoreFromTextFile(CaseSensitive, InputReference, InputCandidate, FileOutputFormat, begintime, startTimeStr);
+						String resultForWrite = ter.getScoreFromTextFile(CaseSensitive, InputReference, InputCandidate, FileOutputFormat, begintime, startTimeStr, rp);
 						writeFile(resultForWrite, FileOutputPath);
 						
 					}
@@ -326,10 +326,10 @@ public class Metrics {
 						writeFile(refData[i], RefFileName);
 					}
 					
-					result = ter.getScoreFromTextFile(CaseSensitive, RefFileName, CanFileName, JSONOutputFormat, begintime, startTimeStr);
+					result = ter.getScoreFromTextFile(CaseSensitive, RefFileName, CanFileName, JSONOutputFormat, begintime, startTimeStr, rp);
 					
 					if(FileOutputFormat != 0) {
-						String resultForWrite = ter.getScoreFromTextFile(CaseSensitive, RefFileName, CanFileName, FileOutputFormat, begintime, startTimeStr);
+						String resultForWrite = ter.getScoreFromTextFile(CaseSensitive, RefFileName, CanFileName, FileOutputFormat, begintime, startTimeStr, rp);
 						writeFile(resultForWrite, FileOutputPath);
 						
 					}
@@ -346,10 +346,10 @@ public class Metrics {
 			}else if(MetricType.equals(METRIC_ROUGE)) {
 				com.omniscien.lsmetric.process.RougeScore rouge = new com.omniscien.lsmetric.process.RougeScore();
 				if(InputType == 1) {
-					result = rouge.getScoreFromTextFile(CaseSensitive, InputReference, InputCandidate, JSONOutputFormat, begintime, startTimeStr);
+					result = rouge.getScoreFromTextFile(CaseSensitive, InputReference, InputCandidate, JSONOutputFormat, begintime, startTimeStr, rp);
 					
 					if(FileOutputFormat != 0) {
-						String resultForWrite = rouge.getScoreFromTextFile(CaseSensitive, InputReference, InputCandidate, FileOutputFormat, begintime, startTimeStr);
+						String resultForWrite = rouge.getScoreFromTextFile(CaseSensitive, InputReference, InputCandidate, FileOutputFormat, begintime, startTimeStr, rp);
 						writeFile(resultForWrite, FileOutputPath);
 						
 					}
@@ -380,10 +380,10 @@ public class Metrics {
 						writeFile(refData[i], RefFileName);
 					}
 					
-					result = rouge.getScoreFromTextFile(CaseSensitive, RefFileName, CanFileName, JSONOutputFormat, begintime, startTimeStr);
+					result = rouge.getScoreFromTextFile(CaseSensitive, RefFileName, CanFileName, JSONOutputFormat, begintime, startTimeStr, rp);
 					
 					if(FileOutputFormat != 0) {
-						String resultForWrite = rouge.getScoreFromTextFile(CaseSensitive, RefFileName, CanFileName, FileOutputFormat, begintime, startTimeStr);
+						String resultForWrite = rouge.getScoreFromTextFile(CaseSensitive, RefFileName, CanFileName, FileOutputFormat, begintime, startTimeStr, rp);
 						writeFile(resultForWrite, FileOutputPath);
 						
 					}
@@ -398,10 +398,10 @@ public class Metrics {
 			}else if(MetricType.equals(METRIC_RIBES)) {
 				com.omniscien.lsmetric.process.RibesScore ribes = new com.omniscien.lsmetric.process.RibesScore();
 				if(InputType == 1) {
-					result = ribes.getScoreFromTextFile(CaseSensitive, InputReference, InputCandidate, JSONOutputFormat, begintime, startTimeStr);
+					result = ribes.getScoreFromTextFile(CaseSensitive, InputReference, InputCandidate, JSONOutputFormat, begintime, startTimeStr, rp);
 					
 					if(FileOutputFormat != 0) {
-						String resultForWrite = ribes.getScoreFromTextFile(CaseSensitive, InputReference, InputCandidate, FileOutputFormat, begintime, startTimeStr);
+						String resultForWrite = ribes.getScoreFromTextFile(CaseSensitive, InputReference, InputCandidate, FileOutputFormat, begintime, startTimeStr, rp);
 						writeFile(resultForWrite, FileOutputPath);
 						
 					}
@@ -430,10 +430,10 @@ public class Metrics {
 						writeFile(refData[i], RefFileName);
 					}
 					
-					result = ribes.getScoreFromTextFile(CaseSensitive, RefFileName, CanFileName, JSONOutputFormat, begintime, startTimeStr);
+					result = ribes.getScoreFromTextFile(CaseSensitive, RefFileName, CanFileName, JSONOutputFormat, begintime, startTimeStr, rp);
 					
 					if(FileOutputFormat != 0) {
-						String resultForWrite = ribes.getScoreFromTextFile(CaseSensitive, RefFileName, CanFileName, FileOutputFormat, begintime, startTimeStr);
+						String resultForWrite = ribes.getScoreFromTextFile(CaseSensitive, RefFileName, CanFileName, FileOutputFormat, begintime, startTimeStr, rp);
 						writeFile(resultForWrite, FileOutputPath);
 						
 					}
@@ -449,10 +449,10 @@ public class Metrics {
 			}else if (MetricType.equals(METRIC_BEER)) {
 				com.omniscien.lsmetric.process.BeerScore beer = new com.omniscien.lsmetric.process.BeerScore();
 				if(InputType == 1) {
-					result = beer.getScoreFromTextFile(CaseSensitive, InputReference, InputCandidate, JSONOutputFormat, begintime, startTimeStr);
+					result = beer.getScoreFromTextFile(CaseSensitive, InputReference, InputCandidate, JSONOutputFormat, begintime, startTimeStr, rp);
 					
 					if(FileOutputFormat != 0) {
-						String resultForWrite = beer.getScoreFromTextFile(CaseSensitive, InputReference, InputCandidate, FileOutputFormat, begintime, startTimeStr);
+						String resultForWrite = beer.getScoreFromTextFile(CaseSensitive, InputReference, InputCandidate, FileOutputFormat, begintime, startTimeStr, rp);
 						writeFile(resultForWrite, FileOutputPath);
 						
 					}
@@ -481,9 +481,9 @@ public class Metrics {
 						writeFile(refData[i], RefFileName);
 					}
 					
-					result = beer.getScoreFromTextFile(CaseSensitive, RefFileName, CanFileName, JSONOutputFormat, begintime, startTimeStr);
+					result = beer.getScoreFromTextFile(CaseSensitive, RefFileName, CanFileName, JSONOutputFormat, begintime, startTimeStr, rp);
 					if(FileOutputFormat != 0) {
-						String resultForWrite = beer.getScoreFromTextFile(CaseSensitive, RefFileName, CanFileName, FileOutputFormat, begintime, startTimeStr);
+						String resultForWrite = beer.getScoreFromTextFile(CaseSensitive, RefFileName, CanFileName, FileOutputFormat, begintime, startTimeStr, rp);
 						writeFile(resultForWrite, FileOutputPath);
 						
 					}
@@ -499,10 +499,10 @@ public class Metrics {
 			}else if (MetricType.equals(METRIC_HLEPOR)) {
 				com.omniscien.lsmetric.process.HleporScore hlepor = new com.omniscien.lsmetric.process.HleporScore();
 				if(InputType == 1) {
-					result = hlepor.getScoreFromTextFile(CaseSensitive, InputReference, InputCandidate, JSONOutputFormat, begintime, startTimeStr);
+					result = hlepor.getScoreFromTextFile(CaseSensitive, InputReference, InputCandidate, JSONOutputFormat, begintime, startTimeStr, rp);
 					
 					if(FileOutputFormat != 0) {
-						String resultForWrite = hlepor.getScoreFromTextFile(CaseSensitive, InputReference, InputCandidate, FileOutputFormat, begintime, startTimeStr);
+						String resultForWrite = hlepor.getScoreFromTextFile(CaseSensitive, InputReference, InputCandidate, FileOutputFormat, begintime, startTimeStr, rp);
 						writeFile(resultForWrite, FileOutputPath);
 						
 					}
@@ -531,9 +531,9 @@ public class Metrics {
 						writeFile(refData[i], RefFileName);
 					}
 					
-					result = hlepor.getScoreFromTextFile(CaseSensitive, RefFileName, CanFileName, JSONOutputFormat, begintime, startTimeStr);
+					result = hlepor.getScoreFromTextFile(CaseSensitive, RefFileName, CanFileName, JSONOutputFormat, begintime, startTimeStr, rp);
 					if(FileOutputFormat != 0) {
-						String resultForWrite = hlepor.getScoreFromTextFile(CaseSensitive, RefFileName, CanFileName, FileOutputFormat, begintime, startTimeStr);
+						String resultForWrite = hlepor.getScoreFromTextFile(CaseSensitive, RefFileName, CanFileName, FileOutputFormat, begintime, startTimeStr, rp);
 						writeFile(resultForWrite, FileOutputPath);
 						
 					}
@@ -548,10 +548,10 @@ public class Metrics {
 			}else if (MetricType.equals(METRIC_METEOR)) {
 				com.omniscien.lsmetric.process.MeteorScore meteor = new com.omniscien.lsmetric.process.MeteorScore();
 				if(InputType == 1) {
-					result = meteor.getScoreFromTextFile(CaseSensitive, InputReference, InputCandidate, JSONOutputFormat, begintime, startTimeStr);
+					result = meteor.getScoreFromTextFile(CaseSensitive, InputReference, InputCandidate, JSONOutputFormat, begintime, startTimeStr, rp);
 					
 					if(FileOutputFormat != 0) {
-						String resultForWrite = meteor.getScoreFromTextFile(CaseSensitive, InputReference, InputCandidate, FileOutputFormat, begintime, startTimeStr);
+						String resultForWrite = meteor.getScoreFromTextFile(CaseSensitive, InputReference, InputCandidate, FileOutputFormat, begintime, startTimeStr, rp);
 						writeFile(resultForWrite, FileOutputPath);
 						
 					}
@@ -580,10 +580,10 @@ public class Metrics {
 						writeFile(refData[i], RefFileName);
 					}
 					
-					result = meteor.getScoreFromTextFile(CaseSensitive, RefFileName, CanFileName, JSONOutputFormat, begintime, startTimeStr);
+					result = meteor.getScoreFromTextFile(CaseSensitive, RefFileName, CanFileName, JSONOutputFormat, begintime, startTimeStr, rp);
 					
 					if(FileOutputFormat != 0) {
-						String resultForWrite = meteor.getScoreFromTextFile(CaseSensitive, RefFileName, CanFileName, FileOutputFormat, begintime, startTimeStr);
+						String resultForWrite = meteor.getScoreFromTextFile(CaseSensitive, RefFileName, CanFileName, FileOutputFormat, begintime, startTimeStr, rp);
 						writeFile(resultForWrite, FileOutputPath);
 						
 					}
@@ -601,10 +601,10 @@ public class Metrics {
 				
 				
 				if(InputType == 1) {
-					result = fmeasure.getScoreFromTextFile(CaseSensitive, InputReference, InputCandidate, JSONOutputFormat, begintime, startTimeStr);
+					result = fmeasure.getScoreFromTextFile(CaseSensitive, InputReference, InputCandidate, JSONOutputFormat, begintime, startTimeStr, rp);
 					
 					if(FileOutputFormat != 0) {
-						String resultForWrite = fmeasure.getScoreFromTextFile(CaseSensitive, InputReference, InputCandidate, FileOutputFormat, begintime, startTimeStr);
+						String resultForWrite = fmeasure.getScoreFromTextFile(CaseSensitive, InputReference, InputCandidate, FileOutputFormat, begintime, startTimeStr, rp);
 						writeFile(resultForWrite, FileOutputPath);
 						
 					}
@@ -633,10 +633,10 @@ public class Metrics {
 						writeFile(refData[i], RefFileName);
 					}
 					
-					result = fmeasure.getScoreFromTextFile(CaseSensitive, RefFileName, CanFileName, JSONOutputFormat, begintime, startTimeStr);
+					result = fmeasure.getScoreFromTextFile(CaseSensitive, RefFileName, CanFileName, JSONOutputFormat, begintime, startTimeStr, rp);
 					
 					if(FileOutputFormat != 0) {
-						String resultForWrite = fmeasure.getScoreFromTextFile(CaseSensitive, RefFileName, CanFileName, FileOutputFormat, begintime, startTimeStr);
+						String resultForWrite = fmeasure.getScoreFromTextFile(CaseSensitive, RefFileName, CanFileName, FileOutputFormat, begintime, startTimeStr, rp);
 						writeFile(resultForWrite, FileOutputPath);
 						
 					}
@@ -667,7 +667,7 @@ public class Metrics {
 					normalizeTerpFileInput(InputReference, CanFileName);
 					normalizeTerpFileInput(InputCandidate, RefFileName);
 					
-					result = terp.getScoreFromTextFile(CaseSensitive, RefFileName, CanFileName, JSONOutputFormat, begintime, startTimeStr);
+					result = terp.getScoreFromTextFile(CaseSensitive, RefFileName, CanFileName, JSONOutputFormat, begintime, startTimeStr, rp);
 				
 					//Delete Temp File
 					File fileCan = new File(CanFileName); 
@@ -676,7 +676,7 @@ public class Metrics {
 					fileRef.delete();
 					
 					if(FileOutputFormat != 0) {
-						String resultForWrite = terp.getScoreFromTextFile(CaseSensitive, InputReference, InputCandidate, FileOutputFormat, begintime, startTimeStr);
+						String resultForWrite = terp.getScoreFromTextFile(CaseSensitive, InputReference, InputCandidate, FileOutputFormat, begintime, startTimeStr, rp);
 						writeFile(resultForWrite, FileOutputPath);
 						
 					}
@@ -703,10 +703,10 @@ public class Metrics {
 						writeLineinFileForTERP(refData[i], RefFileName, refFile, lineNum);
 					}
 					
-					result = terp.getScoreFromTextFile(CaseSensitive, RefFileName, CanFileName, JSONOutputFormat, begintime, startTimeStr);
+					result = terp.getScoreFromTextFile(CaseSensitive, RefFileName, CanFileName, JSONOutputFormat, begintime, startTimeStr, rp);
 					
 					if(FileOutputFormat != 0) {
-						String resultForWrite = terp.getScoreFromTextFile(CaseSensitive, RefFileName, CanFileName, FileOutputFormat, begintime, startTimeStr);
+						String resultForWrite = terp.getScoreFromTextFile(CaseSensitive, RefFileName, CanFileName, FileOutputFormat, begintime, startTimeStr, rp);
 						writeFile(resultForWrite, FileOutputPath);
 						
 					}
